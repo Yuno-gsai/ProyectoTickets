@@ -1,7 +1,4 @@
--- ==========================================
---  ACTUALIZACIÓN: AGREGAR ROL TÉCNICO
---  Sistema de Soporte de Tickets
--- ==========================================
+
 
 USE soporte_tickets;
 
@@ -19,6 +16,4 @@ VALUES
 -- Verificar la actualización
 SELECT id_usuario, nombre, apellido, correo, rol, estado FROM usuarios WHERE rol = 'tecnico';
 
--- ==========================================
---  FIN DEL SCRIPT DE ACTUALIZACIÓN
--- ==========================================
+
