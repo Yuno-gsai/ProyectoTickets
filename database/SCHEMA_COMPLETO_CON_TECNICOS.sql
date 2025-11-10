@@ -157,6 +157,4 @@ VALUES
 -- SELECT id_usuario, CONCAT(nombre, ' ', apellido) as nombre_completo, correo 
 -- FROM usuarios WHERE rol = 'tecnico' AND estado = 'activo';
 
--- ==========================================
---  FIN DEL SCRIPT
--- ==========================================
+
