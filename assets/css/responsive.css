@@ -1,0 +1,605 @@
+/* ============================================
+   RESPONSIVE CSS - Sistema de Soporte Tickets
+   Diseño Responsive para Mobile, Tablet y Desktop
+   ============================================ */
+
+/* Base - Mejoras Generales */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+/* Contenedor Principal */
+.admin-main {
+    width: 100%;
+    max-width: 100%;
+    padding: 20px 15px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* ============================================
+   TABLET Y MÓVILES (max-width: 1024px)
+   ============================================ */
+
+@media (max-width: 1024px) {
+    /* Header */
+    .header-top {
+        padding: 15px 20px !important;
+        flex-wrap: wrap;
+    }
+    
+    .logo-text h1 {
+        font-size: 1.3rem !important;
+    }
+    
+    .logo-text p {
+        font-size: 0.8rem !important;
+    }
+    
+    /* Navegación */
+    .admin-nav {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .nav-menu {
+        flex-wrap: nowrap;
+        padding: 0 10px;
+        min-width: min-content;
+    }
+    
+    .nav-link {
+        white-space: nowrap;
+        padding: 10px 15px !important;
+        font-size: 0.9rem !important;
+    }
+    
+    .nav-link span {
+        display: inline !important;
+    }
+    
+    /* Grids */
+    .dashboard-grid,
+    .stats-grid,
+    .report-types,
+    .help-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
+        gap: 15px !important;
+    }
+}
+
+/* ============================================
+   MÓVILES (max-width: 768px)
+   ============================================ */
+
+@media (max-width: 768px) {
+    /* Typography */
+    h1 { font-size: 1.5rem !important; }
+    h2 { font-size: 1.3rem !important; }
+    h3 { font-size: 1.1rem !important; }
+    
+    /* Header Responsive */
+    .header-top {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px !important;
+    }
+    
+    .logo-container {
+        justify-content: center;
+    }
+    
+    .user-menu {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .header-actions {
+        flex: 1;
+        justify-content: flex-end;
+    }
+    
+    .user-info {
+        flex: 0 0 auto;
+    }
+    
+    .user-name {
+        display: none !important;
+    }
+    
+    /* Navegación Móvil */
+    .admin-nav {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: thin;
+    }
+    
+    .admin-nav::-webkit-scrollbar {
+        height: 4px;
+    }
+    
+    .admin-nav::-webkit-scrollbar-thumb {
+        background: rgba(255,255,255,0.3);
+        border-radius: 4px;
+    }
+    
+    .nav-menu {
+        padding: 10px;
+        gap: 5px;
+    }
+    
+    .nav-link {
+        padding: 8px 12px !important;
+        font-size: 0.85rem !important;
+        min-width: auto;
+    }
+    
+    .nav-link i {
+        font-size: 1rem;
+    }
+    
+    /* Contenedor Principal */
+    .admin-main {
+        padding: 15px 10px;
+    }
+    
+    .container {
+        padding: 0 10px;
+    }
+    
+    /* Cards y Secciones */
+    .page-header,
+    .section-header,
+    .profile-header {
+        padding: 20px 15px !important;
+        margin-bottom: 20px !important;
+    }
+    
+    .page-header h1,
+    .section-header h2 {
+        font-size: 1.4rem !important;
+    }
+    
+    .page-header p {
+        font-size: 0.9rem !important;
+    }
+    
+    /* Stats Cards */
+    .stat-card,
+    .stat-card-overview,
+    .stat-mini {
+        padding: 15px !important;
+    }
+    
+    .stat-card .number,
+    .stat-card-overview .value {
+        font-size: 1.8rem !important;
+    }
+    
+    .stat-icon {
+        width: 50px !important;
+        height: 50px !important;
+        font-size: 1.3rem !important;
+    }
+    
+    /* Grids Responsive */
+    .dashboard-grid,
+    .stats-grid,
+    .stats-mini-grid,
+    .report-types,
+    .help-grid,
+    .tecnicos-grid,
+    .tickets-grid,
+    .info-grid,
+    .metrics-grid,
+    .filters-grid {
+        grid-template-columns: 1fr !important;
+        gap: 15px !important;
+    }
+    
+    /* Tables Responsive */
+    .preview-table,
+    table {
+        font-size: 0.85rem !important;
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        white-space: nowrap;
+    }
+    
+    .preview-table th,
+    .preview-table td,
+    table th,
+    table td {
+        padding: 8px 10px !important;
+    }
+    
+    /* Formularios */
+    .form-control,
+    .filter-select,
+    input,
+    select,
+    textarea {
+        font-size: 16px !important; /* Evita zoom en iOS */
+        padding: 10px !important;
+    }
+    
+    .form-group {
+        margin-bottom: 15px !important;
+    }
+    
+    /* Botones */
+    .btn,
+    .action-buttons button,
+    .action-buttons a {
+        padding: 10px 15px !important;
+        font-size: 0.9rem !important;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .action-buttons {
+        flex-direction: column !important;
+        width: 100%;
+    }
+    
+    .quick-actions {
+        flex-direction: column !important;
+        gap: 10px !important;
+    }
+    
+    .quick-actions .btn {
+        width: 100%;
+    }
+    
+    /* Modales */
+    .modal {
+        padding: 10px !important;
+    }
+    
+    .modal-content {
+        margin: 10px !important;
+        padding: 20px 15px !important;
+    }
+    
+    /* Ticket Cards */
+    .ticket-card,
+    .ticket-item,
+    .notif-item {
+        padding: 15px !important;
+    }
+    
+    .ticket-header {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 10px !important;
+    }
+    
+    .ticket-badges {
+        flex-direction: row !important;
+        gap: 5px !important;
+    }
+    
+    .ticket-info,
+    .ticket-meta {
+        flex-direction: column !important;
+        gap: 8px !important;
+    }
+    
+    /* Técnico Cards */
+    .tech-card,
+    .tecnico-card {
+        padding: 15px !important;
+    }
+    
+    .tech-info {
+        flex-direction: column !important;
+        text-align: center !important;
+    }
+    
+    .tech-avatar {
+        width: 50px !important;
+        height: 50px !important;
+        font-size: 1.2rem !important;
+    }
+    
+    .tickets-stats,
+    .stat-item {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+    }
+    
+    /* Filtros */
+    .filters-section {
+        padding: 20px 15px !important;
+    }
+    
+    .filters-grid {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .filter-group {
+        width: 100%;
+    }
+    
+    /* Dropdowns */
+    .dropdown-menu {
+        position: fixed !important;
+        right: 10px !important;
+        left: auto !important;
+        top: 60px !important;
+        min-width: 250px !important;
+        max-width: calc(100vw - 20px);
+    }
+    
+    .notifications-panel {
+        position: fixed !important;
+        right: 10px !important;
+        left: 10px !important;
+        top: 60px !important;
+        max-height: calc(100vh - 80px);
+        overflow-y: auto;
+    }
+    
+    /* Profile */
+    .profile-avatar {
+        width: 80px !important;
+        height: 80px !important;
+        font-size: 2rem !important;
+    }
+    
+    .profile-header {
+        flex-direction: column !important;
+        text-align: center !important;
+    }
+    
+    /* Reportes */
+    .report-card {
+        padding: 20px 15px !important;
+    }
+    
+    .report-icon {
+        width: 50px !important;
+        height: 50px !important;
+        font-size: 1.5rem !important;
+    }
+    
+    /* Content Grid */
+    .content-grid {
+        grid-template-columns: 1fr !important;
+    }
+    
+    /* Notificaciones */
+    .notif-item {
+        flex-direction: column !important;
+    }
+    
+    .notif-actions {
+        flex-direction: row !important;
+        width: 100%;
+        gap: 5px !important;
+    }
+    
+    .notif-actions .btn-icon {
+        flex: 1;
+        font-size: 0.8rem !important;
+    }
+    
+    /* Footer */
+    .footer-content {
+        grid-template-columns: 1fr !important;
+        padding: 20px 15px !important;
+        text-align: center;
+    }
+    
+    .footer-bottom {
+        flex-direction: column !important;
+        text-align: center !important;
+        padding: 15px !important;
+    }
+    
+    /* Alertas */
+    .alert-info,
+    .alert-warning {
+        padding: 15px !important;
+        font-size: 0.9rem !important;
+    }
+    
+    /* Empty States */
+    .empty-state {
+        padding: 40px 20px !important;
+    }
+    
+    .empty-state i {
+        font-size: 3rem !important;
+    }
+    
+    /* Badges */
+    .badge {
+        padding: 4px 10px !important;
+        font-size: 0.75rem !important;
+    }
+}
+
+/* ============================================
+   MÓVILES PEQUEÑOS (max-width: 480px)
+   ============================================ */
+
+@media (max-width: 480px) {
+    /* Typography Extra Small */
+    h1 { font-size: 1.3rem !important; }
+    h2 { font-size: 1.1rem !important; }
+    h3 { font-size: 1rem !important; }
+    
+    body {
+        font-size: 14px;
+    }
+    
+    /* Header Ultra Compacto */
+    .logo {
+        width: 40px !important;
+        height: 40px !important;
+        font-size: 1.2rem !important;
+    }
+    
+    .logo-text h1 {
+        font-size: 1.1rem !important;
+    }
+    
+    .logo-text p {
+        display: none !important;
+    }
+    
+    /* Nav Extra Compacto */
+    .nav-link {
+        padding: 6px 10px !important;
+        font-size: 0.8rem !important;
+    }
+    
+    .nav-link i {
+        font-size: 0.9rem;
+    }
+    
+    /* Cards Compactas */
+    .stat-card,
+    .ticket-card,
+    .tech-card {
+        padding: 12px !important;
+    }
+    
+    .stat-card .number {
+        font-size: 1.5rem !important;
+    }
+    
+    /* Botones Pequeños */
+    .btn {
+        padding: 8px 12px !important;
+        font-size: 0.85rem !important;
+    }
+    
+    /* Modales Fullscreen */
+    .modal-content {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        border-radius: 0 !important;
+        min-height: 100vh;
+    }
+    
+    /* Tables Scroll */
+    table {
+        font-size: 0.75rem !important;
+    }
+    
+    /* Stats Grid 1 Columna */
+    .tickets-stats {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* ============================================
+   UTILITIES RESPONSIVE
+   ============================================ */
+
+/* Clases Helper */
+.mobile-hidden {
+    display: none !important;
+}
+
+@media (min-width: 769px) {
+    .mobile-only {
+        display: none !important;
+    }
+    
+    .mobile-hidden {
+        display: block !important;
+    }
+}
+
+/* Scroll Suave */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Touch Target Mínimo (44px x 44px para accesibilidad) */
+@media (max-width: 768px) {
+    button,
+    a.btn,
+    .nav-link,
+    .dropdown-item {
+        min-height: 44px !important;
+        min-width: 44px !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+}
+
+/* Landscape Tablets */
+@media (min-width: 769px) and (max-width: 1024px) and (orientation: landscape) {
+    .admin-nav {
+        overflow-x: auto;
+    }
+    
+    .dashboard-grid,
+    .stats-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+}
+
+/* Portrait Tablets */
+@media (min-width: 481px) and (max-width: 768px) and (orientation: portrait) {
+    .dashboard-grid,
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .admin-header,
+    .admin-nav,
+    .admin-footer,
+    .action-buttons,
+    .btn,
+    button {
+        display: none !important;
+    }
+    
+    .admin-main {
+        padding: 0 !important;
+    }
+    
+    .container {
+        max-width: 100% !important;
+    }
+}
+
+/* Dark Mode Support (Opcional) */
+@media (prefers-color-scheme: dark) {
+    /* Puedes agregar estilos para dark mode aquí si lo necesitas */
+}
+
+/* Reducir animaciones para usuarios que lo prefieran */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

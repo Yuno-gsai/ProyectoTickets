@@ -1,0 +1,200 @@
+ .dashboard-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 25px;
+        margin-bottom: 40px;
+    }
+
+    .stat-card {
+        background-color: white;
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow);
+        padding: 25px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        transition: transform 0.3s;
+    }
+
+    .stat-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .stat-icon {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.8rem;
+        color: white;
+    }
+
+    .stat-info h3 {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 5px;
+    }
+
+    .stat-info p {
+        color: var(--gray-color);
+        font-size: 0.9rem;
+    }
+
+    .card-tickets {
+        border-left: 4px solid var(--primary-color);
+    }
+
+    .card-tickets .stat-icon {
+        background-color: var(--primary-color);
+    }
+
+    .card-pending {
+        border-left: 4px solid var(--warning-color);
+    }
+
+    .card-pending .stat-icon {
+        background-color: var(--warning-color);
+    }
+
+    .card-resolved {
+        border-left: 4px solid var(--success-color);
+    }
+
+    .card-resolved .stat-icon {
+        background-color: var(--success-color);
+    }
+
+    .card-critical {
+        border-left: 4px solid var(--danger-color);
+    }
+
+    .card-critical .stat-icon {
+        background-color: var(--danger-color);
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        color: var(--secondary-color);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .recent-tickets {
+        background-color: white;
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow);
+        overflow: hidden;
+    }
+
+    .table-responsive {
+        overflow-x: auto;
+    }
+
+    .tickets-table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .tickets-table th {
+        background-color: #f8f9fa;
+        padding: 15px;
+        text-align: left;
+        font-weight: 600;
+        color: var(--secondary-color);
+        border-bottom: 1px solid #eee;
+    }
+
+    .tickets-table td {
+        padding: 15px;
+        border-bottom: 1px solid #eee;
+    }
+
+    .tickets-table tr:hover {
+        background-color: #f8f9fa;
+    }
+
+    .priority-badge {
+        display: inline-block;
+        padding: 5px 10px;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 600;
+    }
+
+    .priority-high {
+        background-color: rgba(231, 76, 60, 0.1);
+        color: var(--danger-color);
+    }
+
+    .priority-medium {
+        background-color: rgba(243, 156, 18, 0.1);
+        color: var(--warning-color);
+    }
+
+    .priority-low {
+        background-color: rgba(52, 152, 219, 0.1);
+        color: var(--primary-color);
+    }
+
+    .priority-critical {
+        background-color: rgba(192, 57, 43, 0.1);
+        color: #c0392b;
+    }
+
+    .status-badge {
+        display: inline-block;
+        padding: 5px 10px;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 600;
+    }
+
+    .status-pending {
+        background-color: rgba(243, 156, 18, 0.1);
+        color: var(--warning-color);
+    }
+
+    .status-progress {
+        background-color: rgba(52, 152, 219, 0.1);
+        color: var(--primary-color);
+    }
+
+    .status-resolved {
+        background-color: rgba(46, 204, 113, 0.1);
+        color: var(--success-color);
+    }
+
+    .status-rejected {
+        background-color: rgba(149, 165, 166, 0.1);
+        color: #95a5a6;
+    }
+
+    .action-btn {
+        background: none;
+        border: none;
+        color: var(--gray-color);
+        cursor: pointer;
+        padding: 5px;
+        border-radius: 4px;
+        transition: color 0.3s;
+    }
+
+    .action-btn:hover {
+        color: var(--primary-color);
+    }
+
+    @media (max-width: 992px) {
+        .dashboard-cards {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 576px) {
+        .dashboard-cards {
+            grid-template-columns: 1fr;
+        }
+    }
