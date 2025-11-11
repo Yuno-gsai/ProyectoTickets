@@ -1,0 +1,24 @@
+RewriteEngine On
+RewriteBase /proyectophp/vista/admin/
+
+# No redirigir archivos estáticos
+RewriteCond %{REQUEST_URI} !\.html$
+RewriteCond %{REQUEST_URI} !\.js$
+RewriteCond %{REQUEST_URI} !\.css$
+RewriteCond %{REQUEST_URI} !\.json$
+RewriteCond %{REQUEST_URI} !\.jpg$
+RewriteCond %{REQUEST_URI} !\.jpeg$
+RewriteCond %{REQUEST_URI} !\.png$
+RewriteCond %{REQUEST_URI} !\.gif$
+RewriteCond %{REQUEST_URI} !\.svg$
+RewriteCond %{REQUEST_URI} !\.mp3$
+RewriteCond %{REQUEST_URI} !\.pdf$
+RewriteCond %{REQUEST_URI} !\.ico$
+
+# No redirigir si el archivo o directorio existe
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-l
+
+# Redirigir todo lo demás a index.php
+RewriteRule ^(.*)$ index.php?url=$1 [L,QSA]
