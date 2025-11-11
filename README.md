@@ -12,3 +12,7 @@ La solución tecnológica estará basada en un entorno web moderno, accesible de
 Los beneficios esperados de este sistema incluyen una reducción significativa en los tiempos de atención de incidencias, una comunicación más fluida y organizada entre docentes y técnicos, un registro histórico que permitirá generar reportes y planificar mantenimientos preventivos, y una mejora en la transparencia y eficiencia en la gestión de recursos tecnológicos de los laboratorios. Adicionalmente, la incorporación de funcionalidades como el chat interno, las notificaciones en tiempo real y la interfaz móvil para técnicos hacen que esta propuesta resalte frente a otras soluciones, posicionándola como una herramienta moderna y completa.
 
 En conclusión, el sistema propuesto no solo resolverá la problemática actual de seguimiento de incidencias y solicitudes, sino que también ofrecerá un valor agregado con características avanzadas que optimizan la gestión, fortalecen la comunicación y garantizan una experiencia de usuario superior. Con ello, la institución contará con una plataforma que incrementará la productividad, reducirá los tiempos de respuesta y mejorará la calidad del soporte tecnológico en sus laboratorios de cómputo.
+
+
+
+Proyecto terminado !Gracias por todo equio!
